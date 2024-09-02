@@ -1,0 +1,76 @@
+<!-- dashboard.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DiamCircle Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header section -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="accounts.html">Accounts</a></li>
+                <li><a href="transaction.html">Transactions</a></li>
+                <li><a href="settings.html">Settings</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Overview section -->
+    <section class="overview">
+        <h2>Account Overview</h2>
+        <div class="balance">
+            <h3>Balance:</h3>
+            <p id="balance">0.00 Diam</p>
+        </div>
+        <div class="account-info">
+            <h3>Account Information:</h3>
+            <p id="account-id">Account ID: </p>
+            <p id="public-key">Public Key: </p>
+        </div>
+    </section>
+
+    <!-- Transaction history section -->
+    <section class="transaction-history">
+        <h2>Transaction History</h2>
+        <table id="transactions">
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Type</th>
+                    <th>Amount</th>
+                    <th>Sender/Receiver</th>
+                </tr>
+            </thead>
+            <tbody id="transaction-body">
+                <!-- Transaction data will be populated here -->
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Send and receive funds section -->
+    <section class="send-receive">
+        <h2>Send and Receive Funds</h2>
+        <form id="send-form">
+            <label for="recipient">Recipient:</label>
+            <input type="text" id="recipient" required>
+            <label for="amount">Amount:</label>
+            <input type="number" id="amount" required>
+            <button type="submit">Send</button>
+        </form>
+        <form id="receive-form">
+            <label for="sender">Sender:</label>
+            <input type="text" id="sender" required>
+            <label for="amount">Amount:</label>
+            <input type="number" id="amount" required>
+            <button type="submit">Receive</button>
+        </form>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

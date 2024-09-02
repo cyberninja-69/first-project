@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+    
+    <style>
+        body {
+            background-color: black;
+        }
+        .login-container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 400px;
+            text-align: center;
+        }
+        .login-image {
+            width: 100px;
+            height: 100px;
+            margin-bottom: 20px;
+            border-radius: 50%;
+        }
+        .card {
+            background-color: black;
+            border: none;
+        }
+        .card-header {
+            background-color: black;
+            border-bottom: none;
+            color: white;
+        }
+        .card-body {
+            color: white;
+        }
+        .form-control {
+            background-color: black;
+            color: white;
+            border: 1px solid white;
+        }
+        .form-control:focus {
+            background-color: black;
+            color: white;
+            border: 1px solid white;
+            box-shadow: none;
+        }
+        .btn-primary {
+            background-color: black;
+            color: white;
+            border: 1px solid white;
+            padding: 10px 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+        .btn-primary:hover {
+            background-color: black;
+            color: white;
+            border: 1px solid white;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="login-container">
+        <img src="login.JPG" class="login-image">
+        <div class="card">
+            <div class="card-header">Login</div>
+            <div class="card-body">
+                <form id="login-form">
+                    <div class="form-group">
+                        <label for="username" style="color: white;">Email:</label>
+                        <input type="text" id="username" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password" style="color: white;">Password:</label>
+                        <input type="password" id="password" class="form-control" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Login</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $('#login-form').submit(function(event) {
+                event.preventDefault();
+                var username = $('#username').val();
+                var password = $('#password').val();
+
+                // Connect to Diem wallet API
+                $.ajax({
+                    type: 'POST',
+                    url: 'https://api.diamcircle.io/v1/accounts/authenticate',
+                    contentType: 'application/json',
+                    data: JSON.stringify({
+                        username: username,
+                        password: password
+                    }),
+                    success: function(response) {
+                        if (response.success) {
+                            // Login successful, redirect to dashboard
+                            window.location.href = 'dashboard.html';
+                        } else {
+                            // Login failed, display error message
+                            alert('Invalid username or password');
+                        }
+                    },
+                    error: function(xhr, status, error) {
+                        console.log(xhr.responseText);
+                        alert('An error occurred. Please try again later.');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

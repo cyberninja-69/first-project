@@ -1,0 +1,333 @@
+/* Reset some default styles */
+body, h1, h2, h3, p, ul, li, table, th, td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Container for the main sections */
+section {
+    margin: 20px auto;
+    max-width: 1200px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+h2 {
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    color: #007bff;
+}
+
+.balance, .account-info, .transaction-history, .send-receive {
+    margin-bottom: 20px;
+}
+
+.balance p, .account-info p {
+    font-size: 18px;
+    color: #333;
+}
+
+.transaction-history table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.transaction-history th, .transaction-history td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.transaction-history th {
+    background-color: #007bff;
+    color: #fff
+}
+.send-receive form {
+    margin-bottom: 20px;
+}
+
+.send-receive label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.send-receive input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.send-receive button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.send-receive button:hover {
+    background-color: #0056b3;
+}
+
+/* Make sure the layout is responsive */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+}
+
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000; /* Black background */
+    color: #fff; /* White text */
+    line-height: 1.6;
+}
+
+header {
+    background-color: #111; /* Slightly lighter black for header */
+    color: #fff;
+    padding: 10px 0;
+}
+.white-text {
+    color: white;
+}
+
+/* Specific styles for these elements if needed */
+.account-info,
+.account-id,
+.public-key {
+    color: white;
+}
+#balance {
+    color: white;
+}
+#public-key {
+    color: white;
+}
+
+#account-id {
+    color: white;
+}
+
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Container for the main sections */
+section {
+    margin: 20px auto;
+    max-width: 1200px;
+    padding: 20px;
+    background: #111; /* Dark background for sections */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+h2 {
+    border-bottom: 2px solid #fff; /* Dark gray border for headings */
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.account-summary, .accounts-list, .add-account {
+    margin-bottom: 20px;
+}
+
+.account-summary p, .accounts-list th, .accounts-list td, .add-account input, .add-account button {
+    color: #fff; /* White text for various elements */
+}
+
+/* Accounts list section */
+.accounts-list table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.accounts-list th, .accounts-list td {
+    border: 1px solid #555; /* Dark gray borders for table */
+    padding: 8px;
+    text-align: left;
+}
+
+.accounts-list th {
+    background-color: #333; /* Dark gray background for table headers */
+}
+
+/* Add new account section */
+.add-account form {
+    margin-top: 20px;
+    background-color: #333; /* Dark gray background for form */
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.add-account label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.add-account input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #555; /* Dark gray border for inputs */
+    background-color: #444; /* Dark background for inputs */
+    color: #fff; /* White text in inputs */
+}
+
+.add-account button {
+    background-color: #555; /* Medium gray background for button */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.add-account button:hover {
+    background-color: #666; /* Slightly lighter gray for hover effect */
+}
+
+/* Make sure the layout is responsive */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+}
+
+
+
+/*transaction css*/
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1a1a1a; /* Dark background color for contrast */
+    color: white; /* Default text color */
+    margin: 0;
+    padding: 0;
+}
+
+/* Container for the transaction list */
+.transaction-list {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #333; /* Darker background for the transaction list */
+    border-radius: 8px;
+}
+
+/* Header Style */
+h1 {
+    text-align: center;
+    color: #f1f1f1; /* Light color for the header */
+    margin-bottom: 20px;
+}
+
+/* Individual Transaction Item */
+.transaction-item {
+    margin-bottom: 15px;
+    padding: 15px;
+    background-color: #444; /* Slightly lighter background for each item */
+    border-radius: 5px;
+}
+
+/* Styles for transaction ID, amount, and date */
+.transaction-id,
+.transaction-amount,
+.transaction-date {
+    margin: 0;
+    padding: 5px 0;
+}
+
+/* Specific color for the transaction amount */
+.transaction-amount {
+    color: #00ff00; /* Green color for amounts */
+}
+
+/* Specific color for the transaction date */
+.transaction-date {
+    color: #999; /* Lighter color for dates */
+}
+
+
+
+
+
+
+
+

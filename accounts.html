@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DiamCircle Accounts</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header section -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="accounts.html">Accounts</a></li>
+                <li><a href="transactions.html">Transactions</a></li>
+                <li><a href="settings.html">Settings</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Overview section -->
+    <section class="overview">
+        <h2>Accounts Overview</h2>
+        <div class="account-summary">
+            <h3>Total Accounts:</h3>
+            <p id="total-accounts">0</p>
+        </div>
+    </section>
+
+    <!-- Accounts list section -->
+    <section class="accounts-list">
+        <h2>Account Details</h2>
+        <table id="accounts">
+            <thead>
+                <tr>
+                    <th>Account ID</th>
+                    <th>Public Key</th>
+                    <th>Balance</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="accounts-body">
+                <!-- Account data will be populated here -->
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Add new account section -->
+    <section class="add-account">
+        <h2>Add New Account</h2>
+        <form id="add-account-form">
+            <label for="account-id">Account ID:</label>
+            <input type="text" id="account-id" required>
+            <label for="public-key">Public Key:</label>
+            <input type="text" id="public-key" required>
+            <label for="initial-balance">Initial Balance:</label>
+            <input type="number" id="initial-balance" required>
+            <button type="submit">Add Account</button>
+        </form>
+    </section>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
