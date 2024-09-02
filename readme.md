@@ -11,4 +11,6 @@ Some of the doc links were not working but tried to make a simulation of it.
 This is applicable to the lectures who are attending classes and this can be used to implement in real life.
 
 Now it is implemented for college scenario but can be implemented in general purpose also.
+ We were unable to implement the face recognition in this model due to backend issues
+ 
 
